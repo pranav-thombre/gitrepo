@@ -1,10 +1,10 @@
 ---
--name: my playbook 
-host: all
-become: true
-tasks:
-- name: what is the guid of local
-debug:
-msg: "{{ansible_user_guid}}"
-
+- name: first global var playbook
+  hosts: all
+  tasks:
+    - name: first global var playbook
+      debug:
+        msg: "{{URL}}"
+  vars: 
+    URL: www.google.com
 ...
