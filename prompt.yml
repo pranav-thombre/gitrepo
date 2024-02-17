@@ -1,0 +1,11 @@
+---
+- name: Print Debug Message
+  hosts: all
+  vars:
+    prompt: "ENTER YOUR AUTH DETAILS!"
+
+  tasks:
+    - name: Display Debug Message
+      debug:
+        msg: "GREETINGS FROM ANSIBLE."
+...
