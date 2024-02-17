@@ -1,0 +1,11 @@
+---
+- name: first global var playbook
+  hosts: all
+  vars: 
+    URL: www.google.com
+  tasks:
+    - name: first global var playbook
+      debug:
+        msg: "{{URL}}"
+
+...
