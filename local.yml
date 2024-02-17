@@ -1,0 +1,7 @@
+-name: my playbook
+ host: all
+ become: true
+ tasks:
+	-	name: what is the guid of local
+		debug:
+			msg: "{ansible_user_guid}"
