@@ -1,0 +1,11 @@
+---
+- name: first file var playbook
+  hosts: all
+  vars: 
+    file: "pats.yml"
+  
+  tasks:
+    - name: first file var playbook
+      debug:
+        msg: "pats.yml"
+...
