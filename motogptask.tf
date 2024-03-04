@@ -6,8 +6,8 @@ resource "aws_instance" "amazonubuntumachine" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = var.key_name
-  count = var.count
-  security_groups = var.security_groups
+  count = var.countt
+  security_groups = var.security_group
 
  tags = {
     Name = var.tags
@@ -38,13 +38,13 @@ variable "instance_type" {
     default = "id_rsa"
     description = "SAME SG FOR ALL"
  }
- variable "count" {
+ variable "countt" {
     default = "5"
  }
  variable "tags" {
     default = "motogp"
  }
 
- variable "security_group"{
-    default = "sg-0bd1932072ffcba48"
+ variable "security_group" {
+    default = ["vpc-0a0ab11d5bf0f50db"]
  }
