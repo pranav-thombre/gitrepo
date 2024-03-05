@@ -1,5 +1,5 @@
 - name: INSATLLING NGINX
-  hosts: [motogp-1]
+  hosts: [motogp-2]
   become: true
   tasks:
     - name: install web package
