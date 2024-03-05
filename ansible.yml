@@ -1,0 +1,16 @@
+- name: INSATLLING NGINX
+  hosts: [motogp-1]
+  become: true
+  tasks:
+    - name: install web package
+      package:
+        name: nginx
+        state: latest
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name: start apache2
+      systemd:
+        name: nginx
+        state: started
+      when: ansible_os_family == "Debian"
