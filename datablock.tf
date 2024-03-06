@@ -22,7 +22,7 @@ resource "aws_instance" "datablock_1" {
     instance_type = var.instance_type
     key_name = var.key_name
     tags = var.tags
-    vpc_security_group_ids = [data.aws_security_group.server]  
+    vpc_security_group_ids = var.vpc_security_group_ids 
 }
 
 #variable block calling all values
@@ -52,6 +52,11 @@ variable "tags" {
         Environment = "staging"
         Owner = "devpats"
     }
+}
+
+variable "aws_security_group" {
+    default = "sg-0bd1932072ffcba48"
+    description = "sg id of launch-wizard-1"
 }
 
 output "sgids" {
