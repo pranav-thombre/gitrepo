@@ -22,7 +22,7 @@ resource "aws_instance" "datablock_1" {
     instance_type = var.instance_type
     key_name = var.key_name
     tags = var.tags
-    vpc_security_group_ids = var.vpc_security_group_ids 
+    vpc_security_group_ids = [data.aws_security_group.server.id]
 }
 
 #variable block calling all values
