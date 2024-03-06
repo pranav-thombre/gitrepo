@@ -13,7 +13,7 @@ terraform {
 
 #datablock for security group 
 data "aws_security_group" "server" {
-    name = "default"
+    name = "launch-wizard-1"
 }
 
 #resource block for server creation 
@@ -34,7 +34,7 @@ variable "region" {
 
 variable "ami" {
     default = "ami-03bb6d83c60fc5f7c"
-    description = "ami -d from ap-south-1"
+    description = "ami id from ap-south-1"
 }
 
 variable "instance_type" {
