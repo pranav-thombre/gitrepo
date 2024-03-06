@@ -5,7 +5,7 @@ provider "aws" {
 #terraform s3 backend setup 
 terraform {
   backend "s3" {
-    buucket = "datablock-terra"
+    bucket = "datablock-terra"
     key = "terraform.tfstate"
     region = "ap-south-1" 
   }
